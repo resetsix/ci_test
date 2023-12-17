@@ -1,8 +1,13 @@
 name: ci
 
 # 触发条件：需要保证与仓库主分支名称一致！
-on: [push, pull_request]
-
+on:
+  push:
+    branches:
+      - master # 设置 push 触发 CI/CD 的分支。请修改
+  pull_request:
+    branches:
+      - master # 设置 pull_request 触发 CI/CD 的分支。请修改
 jobs:
   install-test-build-deploy:
     runs-on: ubuntu-latest
